@@ -1,0 +1,276 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    background: #f4f4f4;
+    /*background-image: url("hamster.gif");*/
+    color: #333;
+    
+}
+
+#navToggle {
+    align-items:center;
+    width: 60px; /* Width of the button */
+    height: 40px; /* Height of the button */
+    position: absolute;
+    top: 30px; /* Distance from the top of the positioned-container */
+    left: 35px;
+    background-color: transparent; /* Ensure the button background is transparent */
+    border: none; /* Remove button border */
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; /* Evenly space the lines */
+    padding: 0; /* Remove button padding */
+}
+
+#navToggle::before,
+#navToggle::after,
+#navToggle span {
+    content: "";
+    width: 100%; /* Width of each line */
+    height: 4px; /* Height of each line */
+    background-color: rgba(255, 255, 255, 0.7); /* Black with slight transparency */
+    transition: all 0.3s ease; /* Smooth transition for any animation */
+}
+
+#navToggle span {
+    background-color: rgba(255, 255, 255, 0.7); /* Ensure middle line is styled correctly */
+    display: block; /* Necessary to apply dimensions */
+}
+
+#navToggle::before {
+    top: 0;
+}
+
+#navToggle::after {
+    bottom: 0;
+}
+
+#navPanel {
+    display: none; /* Initially hidden */
+    position: fixed; /* Overlay the content */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 75%;
+    /*background-color: rgba(0, 0, 0, 0.5); /* Partly transparent */
+    z-index: 10; /* Ensure it's above other content */
+}
+
+.nav-panel .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px; /* Adjust based on your design */
+    height: 100%;
+    background-color: #fff; /* Non-transparent background for the navigation links */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#navigation:hover #navPanel {
+    display: block; /* Show the navigation panel when hovering over the navigation  */
+}
+
+
+
+#header {
+    background-color: #000;
+    background-image: url("header_pic_1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    height: 350px;
+    display: flex;  
+    justify-content: center; /* Center horizontally */
+    padding-top: 80px;
+    /*align-items: center; /* Center vertically */
+}
+#head_text_2{
+    /*max-width: 200px;*/
+    display: flex;  
+    justify-content: center; /* Center horizontally */
+    align-items: center;
+  /* padding-left: 100px;
+    color: #ffffff;
+   /* background-color: rgba(255, 166, 51, 0.773)*/
+    
+    
+}
+#sosiska_name{
+    padding-left: 50px;
+}
+#sosiska{
+    text-align: left;
+    width: 500px;
+    padding-left: 20px;
+    border-style:solid;
+    border-width: 4px;
+    border-right: #f4f4f4;
+    border-top: #f4f4f4;
+    border-bottom: #f4f4f4;
+}
+#head_text {
+    width: 65%; /* Adjust width to control text wrapping */
+    text-align: left;
+    
+    margin: 0 auto; /* Ensures the text block itself is centered within the header */
+}
+
+.sidebar a.active {
+    background-color: #00374D; /* Change as needed */
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #f4f4f4;
+    padding: 20px;
+    overflow-y: auto; /* Enable scrolling if the page is long */
+}
+.sidebar a {
+    display: block;
+    color: #000;
+    text-decoration: none;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.sidebar a:hover {
+    background-color: #ddd;
+}
+header {
+    background: #00374D;
+    color: #fff;
+    padding-top: 30px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    padding: 0;
+    line-height: 1.3;
+}
+
+section {
+    
+    justify-items: center;
+    margin: 20px 0;
+}
+section p{
+    padding-left: 70px;
+    max-width: 90%;
+    
+}
+@keyframes slideIn {
+    from {
+        transform: translateX(100%); /* Start from the right */
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0); /* Slide in to original position */
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0); /* Start from the original position */
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%); /* Slide out to the right */
+        opacity: 0;
+    }
+}
+
+.citat {
+    opacity: 0; /* Initially hidden */
+    transform: translateX(100%); /* Start off to the right */
+    transition: transform 0.5s, opacity 0.5s;
+
+}
+.image_middle{
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;
+    width: 500px;
+    height: auto;
+    margin-left: 33%;
+    padding-top: 40px;
+    padding-bottom: 20px;    
+}
+.image_label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    font-weight: 100;
+}
+h2 {
+    background-color: #00374D;
+    color: #FFFFFF;
+    text-align: center;
+}
+p.citat{
+    opacity: 0; /* Initially hidden */
+    transform: translateX(100%); /* Start off to the right */
+    transition: transform 0.5s, opacity 0.5s;
+
+    width: 850px;
+    padding: 10px;
+    padding-left: 15px;
+    background-image: linear-gradient(to right, rgba(243, 188, 86, 0.7),rgba(255, 208, 120, 0.7),rgba(255, 223, 163, 0.7),rgba(255, 239, 211, 0.7), #f4f4f4,#f4f4f4);
+    
+    /*background-color: rgba(243, 188, 86, 0.7);*/
+    
+}
+p.citat_who{
+    font-style: italic;
+}
+.citat_img{
+    width: 120px;
+    height: auto;
+    margin-right: 30px;
+}
+#hilfetelefon{
+    width: 160px;
+    height: auto;
+    margin-right: 0px;
+}
+.citat1{
+    padding-left: 70px;
+    padding-right: 10px;
+    
+    display: flex; /* Enables Flexbox */
+    align-items: center;
+}
+#sosiska_sosisovna{
+    padding-left: 60px;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    background: #00374D;
+    color: #fff;
+}
+
+a{
+    font-size: 2em;
+    color: #000;
+    text-decoration: none;
+    
+  }
